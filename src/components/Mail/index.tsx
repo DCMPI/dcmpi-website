@@ -1,11 +1,19 @@
 import React, {useState, useCallback} from 'react';
 import emailjs from '@emailjs/browser';
 import useToast from '@hooks/useToast';
+import {useSelector} from 'react-redux';
+import {RootState} from '@store/index';
+import {contactSectionData as data} from '@data/I10n/home';
 
 const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 const Form = () => {
   const toast = useToast();
+  const {
+    localize: {
+      language,
+    },
+  } = useSelector((state: RootState) => state);
   const [email, setEmail] = useState<string>('');
   const [name, setName] = useState<string>('');
   const [msg, setMsg] = useState<string>('');
@@ -66,7 +74,7 @@ const Form = () => {
     <form className='flex flex-col gap-[10px] rounded-xl'>
       <input
         value={name}
-        placeholder='Your name'
+        placeholder={data?.name[language as keyof typeof data.name]}
         onChange={handleNameChange}
         className='h-[50px] p-[20px] font-inter rounded-lg outline-[#693a70]'
       />
@@ -74,14 +82,14 @@ const Form = () => {
         type='email'
         required
         value={email}
-        placeholder='Your email address'
+        placeholder={data?.email[language as keyof typeof data.email]}
         onChange={handleEmailChange}
         className='h-[50px] p-[20px] font-inter rounded-lg'
       />
       <textarea
         value={msg}
         onChange={handleMsgChange}
-        placeholder='Write your message here'
+        placeholder={data?.message[language as keyof typeof data.message]}
         className='min-h-[120px] p-[20px] font-inter rounded-lg break-all'
       />
       <button
@@ -89,7 +97,7 @@ const Form = () => {
         className='h-[50px] sm:h-[58px] px-[25px] bg-color-orange hover:bg-[#FF8800] font-[600] text-[17px] text-color-white font-inter rounded-lg'
         onClick={handleSubmit}
       >
-        Send Message
+        {data?.buttonText[language as keyof typeof data.buttonText]}
       </button>
     </form>
   );

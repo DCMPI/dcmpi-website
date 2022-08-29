@@ -9,6 +9,10 @@ import Dropdown from '@components/Dropdown';
 import {GrLanguage} from 'react-icons/gr';
 import {dispatchToggleEnglish, dispatchToggleNepali} from '@services/dispatch';
 
+import {useSelector} from 'react-redux';
+import {RootState} from '@store/index';
+import {navData as data} from '@data/I10n/home';
+
 interface NavbarProps {
   featureRef: React.RefObject<HTMLElement>;
   courseRef: React.RefObject<HTMLElement>;
@@ -22,12 +26,18 @@ const LinkItem = ({to, title}: {to: any; title: string}) => {
 
   return (
     <NavLink to='' className='' onClick={handleClick}>
-      <p className='font-inter font-[500] text-[17px] sm:text-[18px] text-color-white hover:text-[#E3DEF4]'>{title}</p>
+      <p className='font-inter font-[600] text-[17px] sm:text-[18px] text-color-white hover:text-[#E3DEF4]'>{title}</p>
     </NavLink>
   );
 };
 
 const Navbar: React.FC<NavbarProps> = ({featureRef, courseRef, contactRef}) => {
+  const {
+    localize: {
+      language,
+    },
+  } = useSelector((state: RootState) => state);
+
   const handleLogoClick = useCallback(() => {
     window.scrollTo({top: 0, behavior: 'smooth'});
   }, []);
@@ -44,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = ({featureRef, courseRef, contactRef}) => {
   return (
     <nav className='fixed top-0 left-0 right-0 bg-color-bg/[0.8] z-50'>
       <div className='flex items-center justify-center bg-[#031B4E] py-1 font-inter text-color-white'>
-        <p className='animate-pulse'>Admission Open!! Hurry Up For Admissions</p>
+        <p className='animate-pulse'>{data?.info[language as keyof typeof data.info]}</p>
       </div>
       <div className='max-w-[1440px] mx-auto px-[5vw] flex items-center justify-between gap-4 py-[10px]'>
         <NavLink
@@ -58,9 +68,9 @@ const Navbar: React.FC<NavbarProps> = ({featureRef, courseRef, contactRef}) => {
           </p>
         </NavLink>
         <div className='flex items-center gap-[15px] sm:gap-[30px]'>
-          <LinkItem to={featureRef} title='Feature' />
-          <LinkItem to={courseRef} title='Course' />
-          <LinkItem to={contactRef} title='Contact' />
+          <LinkItem to={featureRef} title={data?.feature[language as keyof typeof data.feature]} />
+          <LinkItem to={courseRef} title={data?.course[language as keyof typeof data.course]} />
+          <LinkItem to={contactRef} title={data?.contact[language as keyof typeof data.contact]} />
           <Dropdown renderLabel={renderLabel} alignRight>
             <div className='flex flex-col gap-1 p-1 bg-[#7BDEFF] rounded-md'>
               <button className='px-2 py-1 bg-color-white rounded-md text-center text-color-text font-inter cursor-pointer' onClick={dispatchToggleEnglish} type='button'>english</button>
