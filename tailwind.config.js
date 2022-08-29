@@ -33,7 +33,7 @@ module.exports = {
       current: 'currentColor',
       'color-red': '#FF0000',
       'color-green': '#00b156',
-      'color-text': '#282F3E',
+      'color-text': '#595F6A',
       'color-lt-grey': '#9FA3A9',
       'color-black': '#000000',
       'color-white': '#FFFFFF',

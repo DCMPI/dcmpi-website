@@ -7,6 +7,24 @@ interface Props {
   text: string;
 }
 
+interface BtnProps {
+  text: string;
+  onClick(): void;
+  className?: string;
+}
+
+export const Button: React.FC<BtnProps> = ({text, onClick, className}) => (
+  <button
+    type='button'
+    onClick={onClick}
+    className={`w-[160px] h-[50px] sm:h-[58px] sm:w-[193px] rounded-full flex items-center justify-center hover:bg-[#FF8800] bg-[#DD6434] shadow-[0_5px_10px_rgba(0,0,0,0.05)] ${className}`}
+  >
+    <p className='font-inter font-[600] text-[17px] text-color-white'>
+      {text}
+    </p>
+  </button>
+);
+
 export const ScrollButton: React.FC<Props> = ({to, text}) => {
   const handleClick = useCallback(() => {
     scrollTo(to.current.offsetTop);
