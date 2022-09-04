@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '@components/Footer';
-import Form from '@components/Mail';
+import {ContactForm} from '@components/Mail';
 
 import mail from '@images/mail.png';
 import map from '@images/map.png';
@@ -28,7 +28,7 @@ const ContactSection: React.FC = () => {
         </p>
         <div className='sm:w-[600px] lg:w-[100%] mx-auto flex flex-col lg:flex-row lg:items-center bg-gradient-to-l from-[#7BDEFF] to-color-bg rounded-3xl px-[5%] mt-[40px] pt-[50px] lg:pt-[0] gap-[40px] lg:gap-[20px]'>
           <div className='lg:w-[50%] flex flex-col gap-[20px]'>
-            <Form />
+            <ContactForm />
           </div>
           <div className='lg:w-[50%] flex flex-col gap-[15px]'>
             <img src={mail} alt='mail-box' className='max-h-[420px]' />

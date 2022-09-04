@@ -1,19 +1,16 @@
-import React, {BrowserRouter, Route, Routes} from 'react-router-dom';
-import Home from '@containers/Home';
-
+import React from 'react';
+import {BrowserRouter} from 'react-router-dom';
 import {Provider} from 'react-redux';
+
 import ToastContainer from '@components/ToastContainer';
-import PageNotFound from '@containers/PageNotFound';
 import {store} from './store';
+import AppRoutes from './routes';
 
 function App() {
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='*' element={<PageNotFound />} />
-        </Routes>
+        <AppRoutes />
       </BrowserRouter>
       <ToastContainer />
     </Provider>
