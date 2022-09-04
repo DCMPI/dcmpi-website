@@ -1,0 +1,29 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+[[headers]]
+  for = "*.ts"
+  [headers.values]
+    Cache-Control = "public, max-age=15552000"
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=15552000"
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=15552000"
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=15552000"
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=15552000"
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=15552000"

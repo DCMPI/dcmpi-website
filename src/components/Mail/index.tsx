@@ -7,7 +7,7 @@ import {contactSectionData as data} from '@data/I10n/home';
 
 const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-const Form = () => {
+const ContactForm = () => {
   const toast = useToast();
   const {
     localize: {
@@ -44,13 +44,20 @@ const Form = () => {
       e.preventDefault();
       if (!name || !email || !msg) {
         toast('error', 'All fields are required');
-      } else if (name && msg && email && email.match(validRegex)) {
+      } else if (
+        name
+        && msg
+        && email
+        && email.match(validRegex)
+        && process.env.REACT_APP_SERVICE_ID
+        && process.env.REACT_APP_TEMPLATE_ID
+        && process.env.REACT_APP_PUBLIC_KEY) {
         emailjs
           .send(
-            'service_afs7ohd',
-            'template_sdpd3x8',
+            process.env.REACT_APP_SERVICE_ID,
+            process.env.REACT_APP_TEMPLATE_ID,
             {name, email, msg},
-            'd056Baa1wkuyOb8X-',
+            process.env.REACT_APP_PUBLIC_KEY,
           )
           .then(
             (result) => {
@@ -103,4 +110,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export {ContactForm};

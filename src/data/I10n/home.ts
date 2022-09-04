@@ -130,7 +130,7 @@ export const navData = {
     np: 'भर्ना खुल्यो !! सीमित सिट उपलब्ध छ।',
   },
   feature: {
-    en: 'feature',
+    en: 'Feature',
     np: 'विशेषता',
   },
   course: {
@@ -140,5 +140,9 @@ export const navData = {
   contact: {
     en: 'Contact',
     np: 'सम्पर्क',
+  },
+  btnText: {
+    en: 'REGISTER',
+    np: 'दर्ता गर्नुहोस्',
   },
 };

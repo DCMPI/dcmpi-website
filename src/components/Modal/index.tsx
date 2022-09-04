@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, {useCallback, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import {AiFillCloseCircle} from 'react-icons/ai';
 
@@ -14,11 +15,19 @@ const Modal: React.FC = () => {
       language,
     },
   } = useSelector((state: RootState) => state);
+  const navigate = useNavigate();
   const [showModal, setShowModal] = useState<boolean>(true);
 
   const handleHideModal = useCallback(() => {
     setShowModal(false);
   }, []);
+
+  const handleRegisterButton = useCallback(
+    () => {
+      navigate('/register');
+    },
+    [navigate],
+  );
 
   return (
     <div className={`${!showModal ? 'hidden' : ''} fixed inset-0 z-50 overflow-y-auto`}>
@@ -41,7 +50,7 @@ const Modal: React.FC = () => {
             </p>
             <div className='flex items-center justify-center p-4'>
               <Button
-                onClick={handleHideModal}
+                onClick={handleRegisterButton}
                 text={data?.buttonText[language as keyof typeof data.buttonText]}
                 className='w-full sm:w-full'
               />
