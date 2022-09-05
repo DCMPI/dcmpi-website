@@ -3,11 +3,11 @@
 import React, {useCallback, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useSelector} from 'react-redux';
-import {AiFillCloseCircle} from 'react-icons/ai';
+import {HiXCircle} from 'react-icons/hi';
 
+import {Button} from '@components/Buttons';
 import {RootState} from '@store/index';
 import {modalData as data} from '@data/I10n/modal';
-import {Button} from '@components/Buttons';
 
 const Modal: React.FC = () => {
   const {
@@ -43,7 +43,7 @@ const Modal: React.FC = () => {
               <h4 className='font-sans font-[700] text-[28px] text-color-red'>
                 {data?.title[language as keyof typeof data.title]}
               </h4>
-              <AiFillCloseCircle size={30} cursor='pointer' onClick={handleHideModal} />
+              <HiXCircle size='30' color='#595F6A' cursor='pointer' onClick={handleHideModal} />
             </div>
             <p className='font-inter font-[600] p-4 text-[18px] text-color-text leading-relaxed'>
               {data?.subtitle[language as keyof typeof data.subtitle]}

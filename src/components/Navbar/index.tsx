@@ -84,7 +84,7 @@ const Navbar: React.FC<NavbarProps> = ({
             DCMPI
           </p>
         </NavLink>
-        <div className={`hidden lg:flex items-center gap-[15px] sm:gap-[30px] ${hideHomeLinks ? 'hidden' : ''} `}>
+        <div className={`${hideHomeLinks ? 'hidden' : 'hidden lg:flex'} items-center gap-[15px] sm:gap-[30px] `}>
           <LinkItem
             to={featureRef}
             title={data?.feature[language as keyof typeof data.feature]}

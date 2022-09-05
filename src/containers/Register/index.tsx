@@ -2,6 +2,8 @@ import React from 'react';
 
 import Navbar from '@components/Navbar';
 import RegisterForm from '@components/RegisterForm';
+import ContactSection from '@components/ContactSection';
+
 import useLanguage from '@hooks/useLanguage';
 import {registerData as data} from '@data/I10n/register';
 
@@ -24,6 +26,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <ContactSection />
     </main>
   );
 };

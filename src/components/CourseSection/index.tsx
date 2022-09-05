@@ -1,7 +1,7 @@
 import React, {useCallback} from 'react';
-import {LinkBtn} from '@components/Buttons';
-
 import {useSelector} from 'react-redux';
+
+import {LinkBtn} from '@components/Buttons';
 import {RootState} from '@store/index';
 import {courseSectionData as data} from '@data/I10n/home';
 
@@ -14,6 +14,7 @@ interface CardProps {
   info: InfoType[],
   buttonText: {en: string, np: string},
   buttonLink: string,
+  imgSrc: string,
 }
 
 const CourseSection = () => {
@@ -24,10 +25,13 @@ const CourseSection = () => {
   } = useSelector((state: RootState) => state);
 
   const Card: React.FC<CardProps> = useCallback(
-    ({info, buttonText, buttonLink}) => (
-      <div className='bg-[#031B4E] px-8 pt-10 rounded-lg max-w-[350px] shadow-[0_5px_10px_rgba(0,0,0,0.5)]'>
+    ({
+      info, buttonText, buttonLink, imgSrc,
+    }) => (
+      <div className='bg-[#031B4E]/[0.9] px-8 pt-10 rounded-lg max-w-[500px] lg:w-[500px] shadow-[0_5px_10px_rgba(0,0,0,0.5)]'>
+        <img className='w-full lg:h-[280px] mb-10' src={imgSrc} alt='' />
         {info.map((item) => (
-          <div className='flex items-center gap-4 mt-4'>
+          <div className='flex items-center gap-4 mt-6'>
             <img src={item?.icon} alt='' className='max-h-[50px]' />
             <h3 className='font-inter font-[600] text-color-white text-[16px]  sm:text-[20px]'>{item?.title[language as keyof typeof item.title]}</h3>
           </div>
@@ -54,12 +58,13 @@ const CourseSection = () => {
         <p className='max-w-[900px] mx-auto text-center font-inter font-[600] text-[16px] sm:text-[20px] mt-[12px] sm:mt-6 text-color-white mb-[56px] text-center'>
           {data?.subtitle[language as keyof typeof data.subtitle]}
         </p>
-        <div className='flex justify-center gap-8 flex-wrap'>
+        <div className='flex justify-center gap-10 flex-wrap'>
           {data?.cards.map((item) => (
             <Card
               info={item?.info}
               buttonText={item?.buttonText}
               buttonLink={item?.buttonLink}
+              imgSrc={item?.imgSrc}
             />
           ))}
         </div>
