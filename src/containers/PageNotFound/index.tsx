@@ -1,10 +1,11 @@
 import React, {useCallback} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import Navbar from '@components/Navbar';
 import {Button} from '@components/Buttons';
+import ContactSection from '@components/ContactSection';
 
 import HeroImage from '@images/detective.png';
-import {useNavigate} from 'react-router-dom';
 
 const PageNotFound = () => {
   const navigate = useNavigate();
@@ -44,6 +45,7 @@ const PageNotFound = () => {
           </div>
         </div>
       </div>
+      <ContactSection />
     </main>
   );
 };

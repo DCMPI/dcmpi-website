@@ -14,7 +14,7 @@ const RegisterForm = () => {
   const [email, setEmail] = useState<string>('');
   const [name, setName] = useState<string>('');
   const [phoneno, setphoneno] = useState<string>('');
-  const [course, setCourse] = useState<string>('');
+  const [course, setCourse] = useState<string>('engineering');
   const [photo, setPhoto] = useState<File | undefined>();
   const [marksheet, setMarksheet] = useState<File | undefined>();
 
@@ -65,7 +65,7 @@ const RegisterForm = () => {
   const handleSubmit = useCallback(
     (e: React.SyntheticEvent<HTMLButtonElement>) => {
       e.preventDefault();
-      if (!name || !email || !phoneno) {
+      if (!name || !email || !phoneno || !course || !photo || !marksheet) {
         toast('error', 'All fields are required');
       } else if (name && phoneno && email && email.match(validRegex) && photo && marksheet) {
         const Data = {
@@ -105,7 +105,7 @@ const RegisterForm = () => {
   return (
     <form className='flex flex-col gap-6 rounded-xl bg-[#031B4E] p-8'>
       <InputField
-        id='fullname'
+        id='name'
         type='text'
         value={name}
         label={data?.label.name[language as keyof typeof data.label.name]}

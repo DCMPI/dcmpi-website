@@ -6,7 +6,7 @@ import {featureSectionData as data} from '@data/I10n/home';
 const Card = ({title, icon, key}: {title: string, icon: string, key: string}) => (
   <div key={key} className='w-[300px] bg-gradient-to-b from-[#7BDEFF] to-color-bg py-10 border-[1px] border-color-border rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.1)] cursor-pointer'>
     <div className='flex flex-col items-center gap-4'>
-      <img src={icon} alt='feature' className='max-h-[100px]' />
+      <img src={icon} alt='feature' className='max-h-[80px] sm:max-h-[100px]' />
       <h3 className='font-inter font-[600] text-color-white text-[20px]'>{title}</h3>
     </div>
   </div>

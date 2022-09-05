@@ -10,6 +10,8 @@ import plant from '@images/plant.png';
 import time from '@images/time.png';
 import fee from '@images/fee.png';
 import engineering from '@images/engineering.png';
+import civilEng from '@images/civilEng.jpg';
+import plantScience from '@images/plantScience.jpg';
 
 export const heroSectionData = {
   title: {
@@ -66,6 +68,7 @@ export const courseSectionData = {
         np: 'पाठ्यक्रम हेर्नुहोस्',
       },
       buttonLink: 'http://ctevt.org.np/uploads/docs/2021-10-31_diploma_in_civil_engineering_2021.pdf',
+      imgSrc: civilEng,
     },
     {
       info: [{icon: plant, title: {en: 'Diploma in Agriculture (Plant Science)', np: 'कृषिमा डिप्लोमा (वनस्पति विज्ञान)'}},
@@ -76,6 +79,7 @@ export const courseSectionData = {
         np: 'पाठ्यक्रम हेर्नुहोस्',
       },
       buttonLink: 'http://ctevt.org.np/uploads/docs/2019-02-20_Isc%20Ag%20Plant%20Science%20Revised_19%20May,2014.pdf',
+      imgSrc: plantScience,
     },
   ],
 };
@@ -120,6 +124,14 @@ export const contactSectionData = {
   phoneNo: {
     en: '(+977) 9802788587',
     np: '(+९७७) ९८०२७८८५८७',
+  },
+  emailTitle: {
+    en: 'Email',
+    np: 'इ - मेल',
+  },
+  dcmpiEmail: {
+    en: 'dcmpi.edu.np@gmail.com',
+    np: 'dcmpi.edu.np@gmail.com',
   },
 
 };
