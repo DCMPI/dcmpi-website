@@ -4,10 +4,10 @@ import {RootState} from '@store/index';
 import {featureSectionData as data} from '@data/I10n/home';
 
 const Card = ({title, icon, key}: {title: string, icon: string, key: string}) => (
-  <div key={key} className='w-[300px] bg-gradient-to-b from-[#7BDEFF] to-color-bg py-10 border-[1px] border-color-border rounded-lg hover:shadow-[0_0_20px_rgba(0,0,0,0.1)] cursor-pointer'>
+  <div key={key} className='w-[300px] py-10'>
     <div className='flex flex-col items-center gap-4'>
       <img src={icon} alt='feature' className='max-h-[80px] sm:max-h-[100px]' />
-      <h3 className='font-inter font-[600] text-color-white text-[20px]'>{title}</h3>
+      <h3 className='font-inter font-[600] text-color-dark-blue text-[20px]'>{title}</h3>
     </div>
   </div>
 );
@@ -19,10 +19,10 @@ const FeatureSection = () => {
     },
   } = useSelector((state: RootState) => state);
   return (
-    <div className='bg-[#E5E8ED] w-[100%]'>
-      <div className='max-w-[1440px] mx-auto px-[5vw] py-[120px]'>
+    <div className='bg-color-white w-[100%]'>
+      <div className='max-w-[1440px] mx-auto px-[5vw] pt-[150px] pb-[100px]'>
         <div className='flex justify-center'>
-          <h2 className='font-sans font-[700] text-[36px] leading-[44px] text-[#031B4E] lg:mt-[0] text-center sm:text-[64px] sm:leading-[52px]'>
+          <h2 className='font-sans font-[700] text-[36px] leading-[44px] text-color-dark-blue lg:mt-[0] text-center sm:text-[64px] sm:leading-[52px] pb-3 border-b-4 border-color-orange'>
             {data?.title[language as keyof typeof data.title]}
           </h2>
         </div>

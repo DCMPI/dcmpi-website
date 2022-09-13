@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Wave from '@components/Wave';
 import Navbar from '@components/Navbar';
 import RegisterForm from '@components/RegisterForm';
 import ContactSection from '@components/ContactSection';
@@ -11,7 +12,7 @@ const Register = () => {
   const language = useLanguage();
   return (
     <main>
-      <div className='bg-cover bg-[url("assets/images/bg.png")] bg-color-bg w-[100%]'>
+      <div className='bg-cover bg-[url("assets/images/blob.svg")] bg-color-bg w-[100%]'>
         <div className='max-w-[1440px] mx-auto px-[5vw] pb-[70px] lg:relative'>
           <Navbar
             hideHomeLinks
@@ -26,7 +27,10 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <ContactSection />
+      <div>
+        <Wave color='#EADEFF' />
+        <ContactSection />
+      </div>
     </main>
   );
 };

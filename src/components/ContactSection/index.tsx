@@ -18,10 +18,10 @@ const ContactSection: React.FC = () => {
     },
   } = useSelector((state: RootState) => state);
   return (
-    <div className='max-w-[1440px] mx-auto px-[5vw] pt-[120px]'>
+    <div className='max-w-[1440px] mx-auto px-[5vw] pt-[150px]'>
       <div>
         <div className='flex justify-center'>
-          <h2 className='font-sans font-[700] text-[36px] leading-[44px] text-[#031B4E] lg:mt-[0] text-center sm:text-[64px] sm:leading-[52px]'>
+          <h2 className='font-sans font-[700] text-[36px] leading-[44px] text-color-dark-blue lg:mt-[0] text-center sm:text-[64px] sm:leading-[52px] pb-3 border-b-4 border-color-orange'>
             {data?.title[language as keyof typeof data.title]}
           </h2>
         </div>
@@ -32,7 +32,7 @@ const ContactSection: React.FC = () => {
           <div className='flex flex-col gap-[10px] p-8 rounded-lg bg-[#67E8F9] shadow-[0_0_20px_rgba(0,0,0,0.1)] w-72'>
             <div className='flex gap-5 ml-4 sm:ml-0'>
               <img src={map} alt='' className='h-[40px]' />
-              <p className='font-inter text-[18px] sm:text-[22px] text-[#031B4E] text-lg font-[600] self-end'>
+              <p className='font-inter text-[18px] sm:text-[22px] text-color-dark-blue text-lg font-[600] self-end'>
                 {data?.addressTitle[language as keyof typeof data.addressTitle]}
               </p>
             </div>
@@ -43,7 +43,7 @@ const ContactSection: React.FC = () => {
           <div className='flex flex-col gap-[10px] p-8 rounded-lg bg-[#5EEAD4] shadow-[0_0_20px_rgba(0,0,0,0.1)] w-72'>
             <div className='flex gap-5'>
               <img src={mobile} alt='mobile' className='h-[40px]' />
-              <p className='font-inter text-[18px] sm:text-[22px] text-[#031B4E] text-lg font-[600] self-end'>
+              <p className='font-inter text-[18px] sm:text-[22px] text-color-dark-blue text-lg font-[600] self-end'>
                 {data?.phoneTitle[language as keyof typeof data.phoneTitle]}
               </p>
             </div>
@@ -56,7 +56,7 @@ const ContactSection: React.FC = () => {
           <div className='flex flex-col gap-[10px] p-8 rounded-lg bg-[#D8B4FE] shadow-[0_0_20px_rgba(0,0,0,0.1)] w-72'>
             <div className='flex gap-5 ml-4 sm:ml-0'>
               <img src={gmail} alt='' className='h-[40px]' />
-              <p className='font-inter text-[18px] sm:text-[22px] text-[#031B4E] text-lg font-[600] self-end'>
+              <p className='font-inter text-[18px] sm:text-[22px] text-color-dark-blue text-lg font-[600] self-end'>
                 {data?.emailTitle[language as keyof typeof data.emailTitle]}
               </p>
             </div>

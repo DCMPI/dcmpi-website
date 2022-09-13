@@ -37,22 +37,22 @@ const Modal: React.FC = () => {
       />
       <div className='flex items-center min-h-screen px-4 py-8'>
         <div className='relative w-full max-w-lg mx-auto bg-color-white rounded-md shadow-lg'>
-          <div className='mt-2 text-center'>
-            <div className='flex justify-between items-center border-b border-color-border px-4 py-2'>
+          <div className='text-center'>
+            <div className='flex justify-between items-center bg-color-bg rounded-t-md p-4'>
               <div className='w-8' />
-              <h4 className='font-sans font-[700] text-[28px] text-color-red'>
+              <h4 className='font-sans font-[700] text-[28px] text-color-white animate-pulse'>
                 {data?.title[language as keyof typeof data.title]}
               </h4>
-              <HiXCircle size='30' color='#595F6A' cursor='pointer' onClick={handleHideModal} />
+              <HiXCircle size='30' color='#fff' cursor='pointer' onClick={handleHideModal} />
             </div>
-            <p className='font-inter font-[600] p-4 text-[18px] text-color-text leading-relaxed'>
+            <p className='font-inter font-[600] p-4 mt-4 text-[18px] text-color-dark-blue leading-relaxed'>
               {data?.subtitle[language as keyof typeof data.subtitle]}
             </p>
             <div className='flex items-center justify-center p-4'>
               <Button
                 onClick={handleRegisterButton}
                 text={data?.buttonText[language as keyof typeof data.buttonText]}
-                className='w-full sm:w-full'
+                className='transition-all duration-500 w-full sm:w-full bg-transparent border-2 border-color-orange text-color-orange hover:text-color-white hover:bg-color-orange'
               />
             </div>
           </div>

@@ -103,7 +103,7 @@ const RegisterForm = () => {
   );
 
   return (
-    <form className='flex flex-col gap-6 rounded-xl bg-[#031B4E] p-8'>
+    <form className='flex flex-col gap-6 rounded-xl bg-[#0067FF] p-8'>
       <InputField
         id='name'
         type='text'
@@ -132,7 +132,7 @@ const RegisterForm = () => {
         required
       />
       <div>
-        <label className='text-color-white font-inter text-[18px]' htmlFor='course'>
+        <label className='text-color-white font-inter font-[600] text-[18px]' htmlFor='course'>
           {data?.label.course[language as keyof typeof data.label.course]}
         </label>
         <div className='px-[20px] mt-2 bg-color-white rounded-lg cursor-pointer'>
@@ -170,7 +170,7 @@ const RegisterForm = () => {
       />
       <button
         type='button'
-        className='h-[50px] sm:h-[58px] mt-6 px-[25px] bg-color-orange hover:bg-[#FF8800] font-[600] text-[17px] text-color-white font-inter rounded-full'
+        className='h-[50px] sm:h-[58px] mt-6 px-[25px] bg-color-orange hover:bg-[#DD6434] font-[600] text-[17px] text-color-white font-inter rounded-full'
         onClick={handleSubmit}
       >
         {data?.buttonText[language as keyof typeof data.buttonText]}

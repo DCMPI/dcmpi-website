@@ -24,7 +24,7 @@ const Footer = () => {
             DCMPI
           </p>
         </NavLink>
-        <div className='flex flex-row gap-[20px]'>
+        <div className='flex flex-row gap-6'>
           <a
             href='https://www.facebook.com'
             target='_blank'
@@ -37,14 +37,14 @@ const Footer = () => {
             target='_blank'
             rel='noreferrer'
           >
-            <img src={twitter} alt='' className='h-[50px] rounded-full' />
+            <img src={twitter} alt='' className='h-[50px]' />
           </a>
           <a
             href='https://www.instagram.com/'
             target='_blank'
             rel='noreferrer'
           >
-            <img src={insta} alt='' className='h-[50px] rounded-full' />
+            <img src={insta} alt='' className='h-[50px]' />
           </a>
         </div>
       </div>
