@@ -28,8 +28,8 @@ const CourseSection = () => {
     ({
       info, buttonText, buttonLink, imgSrc,
     }) => (
-      <div className='bg-[#031B4E]/[0.9] px-8 pt-10 rounded-lg max-w-[500px] lg:w-[500px] shadow-[0_5px_10px_rgba(0,0,0,0.5)]'>
-        <img className='w-full lg:h-[280px] mb-10' src={imgSrc} alt='' />
+      <div className='bg-color-bg px-4 md:px-8 pt-10 rounded-md max-w-[500px] lg:w-[500px] shadow-[0_0_20px_rgba(103, 232, 249, 0.5)]'>
+        <img className='w-full lg:h-[280px] mb-10 rounded-md' src={imgSrc} alt='' />
         {info.map((item) => (
           <div className='flex items-center gap-4 mt-6'>
             <img src={item?.icon} alt='' className='max-h-[50px]' />
@@ -48,14 +48,14 @@ const CourseSection = () => {
   );
 
   return (
-    <div className='bg-cover bg-[url("assets/images/bg-2.jpg")] bg-color-bg w-[100%]'>
-      <div className='max-w-[1440px] mx-auto px-[5vw] py-[120px]'>
+    <div className='bg-[#EADEFF] w-[100%]'>
+      <div className='max-w-[1440px] mx-auto px-[5vw] py-[150px]'>
         <div className='flex justify-center'>
-          <h2 className='font-sans font-[700] text-[36px] leading-[44px] text-color-white lg:mt-[0] text-center sm:text-[64px] sm:leading-[52px]'>
+          <h2 className='font-sans font-[700] text-[36px] leading-[44px] text-color-dark-blue lg:mt-[0] text-center sm:text-[64px] sm:leading-[52px] pb-3 border-b-4 border-color-orange'>
             {data?.title[language as keyof typeof data.title]}
           </h2>
         </div>
-        <p className='max-w-[900px] mx-auto text-center font-inter font-[600] text-[16px] sm:text-[20px] mt-[12px] sm:mt-6 text-color-white mb-[56px] text-center'>
+        <p className='max-w-[900px] mx-auto text-center font-inter font-[600] text-[16px] sm:text-[20px] mt-[12px] sm:mt-6 text-color-text mb-[56px] text-center'>
           {data?.subtitle[language as keyof typeof data.subtitle]}
         </p>
         <div className='flex justify-center gap-10 flex-wrap'>

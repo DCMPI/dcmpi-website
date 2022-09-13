@@ -5,6 +5,7 @@ import scholarship from '@images/scholarship.png';
 import job from '@images/job.png';
 import infra from '@images/infra.png';
 import classes from '@images/classes.png';
+import peace from '@images/peace.png';
 
 import plant from '@images/plant.png';
 import time from '@images/time.png';
@@ -23,8 +24,8 @@ export const heroSectionData = {
     np: 'दिनेश चौधरी स्मृति प्रतिष्ठान द्वारा सञ्चालित।',
   },
   buttonText: {
-    en: 'CONTACT US',
-    np: 'सम्पर्क गर्नुहोस',
+    en: 'Contact us',
+    np: 'सम्पर्क गर्नुहोस्',
   },
 };
 
@@ -42,10 +43,10 @@ export const featureSectionData = {
     {icon: lab, title: {en: 'Modern laboratory', np: 'आधुनिक प्रयोगशाला'}},
     {icon: library, title: {en: 'Well Stocked Library', np: 'पुस्तकलयको राम्रो व्यवस्था'}},
     {icon: classes, title: {en: 'Practical Classes', np: 'प्रयोगात्मक कक्षाहरू'}},
-    {icon: scholarship, title: {en: 'Scholorship available', np: 'विभिन्न छात्रवृत्तिको व्यवस्था'}},
+    {icon: scholarship, title: {en: 'Scholarship available', np: 'विभिन्न छात्रवृत्तिको व्यवस्था'}},
     {icon: job, title: {en: 'Job Placement', np: 'रोजगारीको अवसर'}},
     {icon: infra, title: {en: 'Infrastructure & amenities', np: 'सुबिधा सम्पन्न भौतिक पूर्वाधार'}},
-    {icon: infra, title: {en: 'Peaceful environment', np: 'शान्त र स्वच्छ वातावरण'}},
+    {icon: peace, title: {en: 'Peaceful environment', np: 'शान्त र स्वच्छ वातावरण'}},
   ],
 };
 
@@ -64,7 +65,7 @@ export const courseSectionData = {
         {icon: time, title: {en: 'Duration - 3 years', np: 'अवधि - ३ वर्ष'}},
         {icon: fee, title: {en: 'Fee - Rs 2,00,000', np: 'शुल्क - रु २,00,000'}}],
       buttonText: {
-        en: 'VIEW SYLLABUS',
+        en: 'View Syllabus',
         np: 'पाठ्यक्रम हेर्नुहोस्',
       },
       buttonLink: 'http://ctevt.org.np/uploads/docs/2021-10-31_diploma_in_civil_engineering_2021.pdf',
@@ -75,13 +76,28 @@ export const courseSectionData = {
         {icon: time, title: {en: 'Duration - 3 years', np: 'अवधि - ३ वर्ष'}},
         {icon: fee, title: {en: 'Fee - Rs 1,90,000', np: 'शुल्क - रु १,९0,000'}}],
       buttonText: {
-        en: 'VIEW SYLLABUS',
+        en: 'View Syllabus',
         np: 'पाठ्यक्रम हेर्नुहोस्',
       },
       buttonLink: 'http://ctevt.org.np/uploads/docs/2019-02-20_Isc%20Ag%20Plant%20Science%20Revised_19%20May,2014.pdf',
       imgSrc: plantScience,
     },
   ],
+};
+
+export const InstructorSectionData = {
+  title: {
+    en: 'Instructors',
+    np: 'प्रशिक्षकहरू',
+  },
+  subtitle: {
+    en: 'DCMPI instructors are passionate about teaching. Here are a few of the people we are pleased to say are part of the DCMPI team.',
+    np: 'DCMPI को प्रशिक्षकहरू शिक्षणको बारेमा भावुक छन्। यहाँ केहि व्यक्तिहरू छन् जसलाई हामीले DCMPI टोलीको हिस्सा भन्न पाउँदा खुसी छौं।',
+  },
+  name: {
+    en: 'Prof. Rita Ora',
+    np: 'प्रोफेसर रीता ओरा',
+  },
 };
 
 export const contactSectionData = {
@@ -149,12 +165,16 @@ export const navData = {
     en: 'Course',
     np: 'पाठ्यक्रम',
   },
+  instructor: {
+    en: 'Instructor',
+    np: 'प्रशिक्षक',
+  },
   contact: {
     en: 'Contact',
     np: 'सम्पर्क',
   },
   btnText: {
-    en: 'REGISTER',
+    en: 'Register',
     np: 'दर्ता गर्नुहोस्',
   },
 };

@@ -36,7 +36,7 @@ const InputField: React.FC<InputProps> = ({
       className='flex flex-col gap-2'
     >
       <label
-        className='text-color-white font-inter text-[18px] cursor-pointer'
+        className='text-color-white font-inter font-[600] text-[18px] cursor-pointer'
         htmlFor={id}
       >
         {label}
