@@ -13,6 +13,33 @@ import fee from '@images/fee.png';
 import engineering from '@images/engineering.png';
 import civilEng from '@images/civilEng.jpg';
 import plantScience from '@images/plantScience.jpg';
+import pharmacy from '@images/pharmacy.jpg';
+
+import babitaLekhi from '@images/dcmpi/babitaLekhi.png';
+import babitaKumari from '@images/dcmpi/babitaKumari.png';
+import joshnaRaut from '@images/dcmpi/joshnaRaut.png';
+import ajay from '@images/dcmpi/ajay.png';
+import mahesh from '@images/dcmpi/mahesh.png';
+import abadh from '@images/dcmpi/abadh.png';
+import tilak from '@images/dcmpi/tilak.png';
+import upendra from '@images/dcmpi/upendra.png';
+
+import lab1 from '@images/dcmpi/lab1.jpg';
+import lab2 from '@images/dcmpi/lab2.jpg';
+import lab3 from '@images/dcmpi/lab3.jpg';
+import class1 from '@images/dcmpi/class1.jpg';
+import class2 from '@images/dcmpi/class2.jpg';
+import build1 from '@images/dcmpi/build1.png';
+import build2 from '@images/dcmpi/build2.png';
+import build3 from '@images/dcmpi/build3.png';
+import build4 from '@images/dcmpi/build4.png';
+import build5 from '@images/dcmpi/build5.png';
+import build6 from '@images/dcmpi/build6.png';
+import build8 from '@images/dcmpi/build8.png';
+import library1 from '@images/dcmpi/library1.jpg';
+import library2 from '@images/dcmpi/library2.jpg';
+import library3 from '@images/dcmpi/library3.jpg';
+import jobAlt from '@images/dcmpi/job.jpg';
 
 export const heroSectionData = {
   title: {
@@ -39,14 +66,14 @@ export const featureSectionData = {
     np: 'विद्यार्थी केन्द्रितता DCMPI को मूल मान हो। प्रत्येक क्रियाकलाप, चाहे त्यो पाठ्यक्रम, सह-पाठ्यक्रम वा अतिरिक्त-पाठ्यक्रम होस्, विद्यार्थीहरूको वृद्धि र विकासलाई ध्यानमा राखेर डिजाइन गरिएको हो।',
   },
   cards: [
-    {icon: lecture, title: {en: 'Experienced Professors', np: 'अनुभवी प्रोफेसरहरू'}},
-    {icon: lab, title: {en: 'Modern laboratory', np: 'आधुनिक प्रयोगशाला'}},
-    {icon: library, title: {en: 'Well Stocked Library', np: 'पुस्तकलयको राम्रो व्यवस्था'}},
-    {icon: classes, title: {en: 'Practical Classes', np: 'प्रयोगात्मक कक्षाहरू'}},
-    {icon: scholarship, title: {en: 'Scholarship available', np: 'विभिन्न छात्रवृत्तिको व्यवस्था'}},
-    {icon: job, title: {en: 'Job Placement', np: 'रोजगारीको अवसर'}},
-    {icon: infra, title: {en: 'Infrastructure & amenities', np: 'सुबिधा सम्पन्न भौतिक पूर्वाधार'}},
-    {icon: peace, title: {en: 'Peaceful environment', np: 'शान्त र स्वच्छ वातावरण'}},
+    {icon: lecture, title: {en: 'Experienced Professors', np: 'अनुभवी प्रोफेसरहरू'}, images: [babitaLekhi, babitaKumari, joshnaRaut, ajay, tilak, mahesh]},
+    {icon: lab, title: {en: 'Modern laboratory', np: 'आधुनिक प्रयोगशाला'}, images: [lab1, lab2, lab3]},
+    {icon: library, title: {en: 'Well Stocked Library', np: 'पुस्तकलयको राम्रो व्यवस्था'}, images: [library1, library2, library3]},
+    {icon: classes, title: {en: 'Practical Classes', np: 'प्रयोगात्मक कक्षाहरू'}, images: [lab1, class1, class2]},
+    {icon: scholarship, title: {en: 'Scholarship available', np: 'विभिन्न छात्रवृत्तिको व्यवस्था'}, images: [civilEng, pharmacy, jobAlt]},
+    {icon: job, title: {en: 'Job Placement', np: 'रोजगारीको अवसर'}, images: [civilEng, pharmacy, jobAlt]},
+    {icon: infra, title: {en: 'Infrastructure & amenities', np: 'सुबिधा सम्पन्न भौतिक पूर्वाधार'}, images: [build4, build5, build8]},
+    {icon: peace, title: {en: 'Peaceful environment', np: 'शान्त र स्वच्छ वातावरण'}, images: [build1, build2, build3]},
   ],
 };
 
@@ -79,8 +106,18 @@ export const courseSectionData = {
         en: 'View Syllabus',
         np: 'पाठ्यक्रम हेर्नुहोस्',
       },
-      buttonLink: 'http://ctevt.org.np/uploads/docs/2019-02-20_Isc%20Ag%20Plant%20Science%20Revised_19%20May,2014.pdf',
+      buttonLink: 'http://ctevt.org.np/uploads/docs/2023-01-18_dipag006_diploma_agriculture_plant_science_revised_2021.pdf',
       imgSrc: plantScience,
+    },
+    {
+      info: [{icon: plant, title: {en: 'Diploma in Pharmacy', np: 'फार्मेसी मा डिप्लोमा'}},
+        {icon: time, title: {en: 'Duration - 3 years', np: 'अवधि - ३ वर्ष'}}],
+      buttonText: {
+        en: 'View Syllabus',
+        np: 'पाठ्यक्रम हेर्नुहोस्',
+      },
+      buttonLink: 'http://ctevt.org.np/uploads/docs/2022-08-26_diphe016_diploma_in_pharmacy_2021.pdf',
+      imgSrc: pharmacy,
     },
   ],
 };
@@ -94,10 +131,109 @@ export const InstructorSectionData = {
     en: 'DCMPI instructors are passionate about teaching. Here are a few of the people we are pleased to say are part of the DCMPI team.',
     np: 'DCMPI को प्रशिक्षकहरू शिक्षणको बारेमा भावुक छन्। यहाँ केहि व्यक्तिहरू छन् जसलाई हामीले DCMPI टोलीको हिस्सा भन्न पाउँदा खुसी छौं।',
   },
-  name: {
-    en: 'Prof. Rita Ora',
-    np: 'प्रोफेसर रीता ओरा',
+  teachers: [{
+    img: babitaLekhi,
+    status: {
+      en: 'Principal',
+      np: 'प्रिन्सिपल',
+    },
+    name: {
+      en: 'Babita Lekhi',
+      np: 'बबिता लेखी',
+    },
   },
+  {
+    img: joshnaRaut,
+    status: {
+      en: 'Chemistry Prof.',
+      np: 'रसायन विज्ञान प्राध्यापक',
+    },
+    name: {
+      en: 'Joshna Raut',
+      np: 'जोस्ना राउत',
+    },
+  },
+  {
+    img: babitaKumari,
+    status: {
+      en: 'English Prof.',
+      np: 'अंग्रेजी प्राध्यापक',
+    },
+    name: {
+      en: 'Babita Kumari Chaudhary',
+      np: 'बबिता कुमारी चौधरी',
+    },
+  },
+  {
+    img: ajay,
+    status: {
+      en: 'Co-ordinator',
+      np: 'संयोजक',
+    },
+    name: {
+      en: 'Ajay Chaudhary',
+      np: 'अजय चौधरी',
+    },
+  },
+  {
+    img: mahesh,
+    status: {
+      en: 'Math Prof.',
+      np: 'गणित प्राध्यापक',
+    },
+    name: {
+      en: 'Mahesh Chaudhary',
+      np: 'महेश चौधरी',
+    },
+  },
+  {
+    img: abadh,
+    status: {
+      en: 'Administrator',
+      np: 'प्रशासक',
+    },
+    name: {
+      en: 'Abadh Narayan Chaudhary',
+      np: 'अवध नारायण चौधरी',
+    },
+  },
+  {
+    img: tilak,
+    status: {
+      en: 'Physics Prof.',
+      np: 'भौतिकशास्त्र प्राध्यापक',
+    },
+    name: {
+      en: 'Tilak Ram Mehta',
+      np: 'तिलक राम मेहता',
+    },
+  },
+  {
+    img: upendra,
+    status: {
+      en: 'Botany & Geology Prof.',
+      np: 'वनस्पति र भूविज्ञान प्राध्यापक',
+    },
+    name: {
+      en: 'Upendra Chaudhary',
+      np: 'उपेन्द्र चौधरी',
+    },
+  },
+  ],
+};
+
+export const GallerySectionData = {
+  title: {
+    en: 'Gallery',
+    np: 'ग्यालेरी',
+  },
+  subtitle: {
+    en: '',
+    np: '',
+  },
+  images: [
+    build8, class1, build6, lab1, build3, lab2, lab3, class2, build1, build2, build4, build5,
+  ],
 };
 
 export const contactSectionData = {
@@ -129,33 +265,47 @@ export const contactSectionData = {
     en: 'ADDRESS',
     np: 'ठेगाना',
   },
-  address: {
-    en: 'Duhabi-2, Sunsari, Nepal',
-    np: 'दुहबी-२, सुनसरी, नेपाल',
-  },
+  address: [{
+    en: 'Sunsari, Nepal',
+    np: 'सुनसरी, नेपाल',
+  }, {
+    en: 'Inaruwa road, Duhabi-2',
+    np: 'इनरुवा सडक, दुहबी-२',
+  }],
   phoneTitle: {
     en: 'PHONE NO',
     np: 'फोन नं',
   },
-  phoneNo: {
-    en: '(+977) 9802788587',
-    np: '(+९७७) ९८०२७८८५८७',
+  phoneNo: [{
+    en: '025-543216',
+    np: '०२५-५४३२१६',
+  }, {
+    en: '(+977) 9842059009',
+    np: '(+९७७) ९८४२०५९००९',
+  }, {
+    en: '(+977) 9802788633',
+    np: '(+९७७) ९८०२७८८६३३',
   },
+  ],
   emailTitle: {
     en: 'Email',
     np: 'इ - मेल',
   },
-  dcmpiEmail: {
+  dcmpiEmail: [{
     en: 'dcmpi.edu.np@gmail.com',
     np: 'dcmpi.edu.np@gmail.com',
   },
+  {
+    en: 'dineshpratisthan@gmail.com',
+    np: 'dineshpratisthan@gmail.com',
+  }],
 
 };
 
 export const navData = {
   info: {
-    en: 'Admission Open!! limited seats available',
-    np: 'भर्ना खुल्यो !! सीमित सिट उपलब्ध छ।',
+    en: 'For more information: 025-543216, 9842059009, 9802788633',
+    np: 'थप जानकारीको लागि: ०२५-५४३२१६, ९८४२०५९००९, ९८०२७८८६३३',
   },
   feature: {
     en: 'Feature',

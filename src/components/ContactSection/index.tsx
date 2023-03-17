@@ -36,9 +36,11 @@ const ContactSection: React.FC = () => {
                 {data?.addressTitle[language as keyof typeof data.addressTitle]}
               </p>
             </div>
-            <p className='font-inter font-[500] text-[16px] sm:text-[18px] text-color-text self-end'>
-              {data?.address[language as keyof typeof data.address]}
-            </p>
+            {data?.address.map((address) => (
+              <p className='font-inter font-[500] text-[16px] sm:text-[18px] text-color-text self-center'>
+                {address[language as keyof typeof address]}
+              </p>
+            ))}
           </div>
           <div className='flex flex-col gap-[10px] p-8 rounded-lg bg-[#5EEAD4] shadow-[0_0_20px_rgba(0,0,0,0.1)] w-72'>
             <div className='flex gap-5'>
@@ -48,9 +50,11 @@ const ContactSection: React.FC = () => {
               </p>
             </div>
             <div className='flex flex-col gap-2'>
-              <p className='font-inter font-[500] text-[16px] sm:text-[18px] text-color-text self-end'>
-                {data?.phoneNo[language as keyof typeof data.phoneNo]}
-              </p>
+              {data?.phoneNo.map((num) => (
+                <p className='font-inter font-[500] text-[16px] sm:text-[18px] text-color-text self-center'>
+                  {num[language as keyof typeof num]}
+                </p>
+              ))}
             </div>
           </div>
           <div className='flex flex-col gap-[10px] p-8 rounded-lg bg-[#D8B4FE] shadow-[0_0_20px_rgba(0,0,0,0.1)] w-72'>
@@ -60,9 +64,11 @@ const ContactSection: React.FC = () => {
                 {data?.emailTitle[language as keyof typeof data.emailTitle]}
               </p>
             </div>
-            <p className='font-inter font-[500] text-[16px] sm:text-[18px] text-color-text self-end'>
-              {data?.dcmpiEmail[language as keyof typeof data.dcmpiEmail]}
-            </p>
+            {data?.dcmpiEmail.map((email) => (
+              <p className='font-inter font-[500] text-[16px] sm:text-[18px] text-color-text self-center'>
+                {email[language as keyof typeof email]}
+              </p>
+            ))}
           </div>
         </div>
         <div className='sm:w-[600px] lg:w-[100%] mx-auto flex flex-col lg:flex-row lg:items-center bg-gradient-to-l from-[#7BDEFF] to-color-bg rounded-3xl px-[5%] mt-20 pt-[50px] lg:pt-[0] gap-[40px] lg:gap-[20px]'>

@@ -49,7 +49,12 @@ const Footer = () => {
         </div>
       </div>
       <p className='mt-[28px] mb-[50px] font-inter font-[400] text-color-lt-grey text-center'>
-        © DCMPI 2022. All rights reserved.
+        © DCMPI
+        {' '}
+        {new Date().getFullYear()}
+        .
+        {' '}
+        All rights reserved.
       </p>
     </footer>
   );

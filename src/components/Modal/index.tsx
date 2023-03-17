@@ -16,7 +16,7 @@ const Modal: React.FC = () => {
     },
   } = useSelector((state: RootState) => state);
   const navigate = useNavigate();
-  const [showModal, setShowModal] = useState<boolean>(true);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleHideModal = useCallback(() => {
     setShowModal(false);

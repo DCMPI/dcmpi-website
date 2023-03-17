@@ -9,6 +9,7 @@ import ContactSection from '@components/ContactSection';
 import CourseSection from '@components/CourseSection';
 import FeatureSection from '@components/FeatureSection';
 import InstructorSection from '@components/InstructorSection';
+import GallerySection from '@components/GallerySection';
 
 import {heroSectionData} from '@data/I10n/home';
 import {RootState} from '@store/index';
@@ -37,14 +38,14 @@ const Home = () => {
           />
           <div className='py-[20px] flex flex-col gap-[50px] pt-[160px] lg:pt-[200px] pb-[50px] lg:flex-row lg:gap-[20px]'>
             <div className='lg:w-[50%] flex flex-col gap-6 justify-center'>
-              <h1 className={`${language === 'en' ? 'leading-[44px] sm:leading-[68px]' : 'leading-[55px] sm:leading-[90px]'} font-sans font-[700] text-[36px] sm:text-[64px] text-color-white drop-shadow-lg`}>
-                {heroSectionData.title[language as keyof typeof heroSectionData.title]}
-              </h1>
               <div className='flex'>
                 <h2 className='font-sans font-[700] leading-[28px] text-[18px] sm:text-[20px] text-[#E3DEF4] pb-3 border-b-4 border-color-orange drop-shadow-lg'>
                   {heroSectionData.subtitle[language as keyof typeof heroSectionData.subtitle]}
                 </h2>
               </div>
+              <h1 className={`${language === 'en' ? 'leading-[44px] sm:leading-[68px]' : 'leading-[55px] sm:leading-[90px]'} font-sans font-[700] text-[36px] sm:text-[64px] text-color-white drop-shadow-lg`}>
+                {heroSectionData.title[language as keyof typeof heroSectionData.title]}
+              </h1>
               <div className='mt-2'>
                 <ScrollButton to={contactRef} text={`${heroSectionData.buttonText[language as keyof typeof heroSectionData.buttonText]}`} />
               </div>
@@ -63,8 +64,12 @@ const Home = () => {
         <Wave color='#fff' />
         <CourseSection />
       </section>
-      <section ref={instructorRef}>
+      <section>
         <Wave color='#EADEFF' />
+        <GallerySection />
+      </section>
+      <section ref={instructorRef}>
+        <Wave color='#fff' />
         <InstructorSection />
       </section>
       <section ref={contactRef}>
