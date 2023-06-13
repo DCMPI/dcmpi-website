@@ -145,8 +145,8 @@ export const InstructorSectionData = {
   {
     img: joshnaRaut,
     status: {
-      en: 'Chemistry Prof.',
-      np: 'रसायन विज्ञान प्राध्यापक',
+      en: 'Chemistry lecturer',
+      np: 'रसायन विज्ञान लेक्चरर',
     },
     name: {
       en: 'Joshna Raut',
@@ -156,8 +156,8 @@ export const InstructorSectionData = {
   {
     img: babitaKumari,
     status: {
-      en: 'English Prof.',
-      np: 'अंग्रेजी प्राध्यापक',
+      en: 'English lecturer',
+      np: 'अंग्रेजी लेक्चरर',
     },
     name: {
       en: 'Babita Kumari Chaudhary',
@@ -178,8 +178,8 @@ export const InstructorSectionData = {
   {
     img: mahesh,
     status: {
-      en: 'Math Prof.',
-      np: 'गणित प्राध्यापक',
+      en: 'Math lecturer',
+      np: 'गणित लेक्चरर',
     },
     name: {
       en: 'Mahesh Chaudhary',
@@ -200,8 +200,8 @@ export const InstructorSectionData = {
   {
     img: tilak,
     status: {
-      en: 'Physics Prof.',
-      np: 'भौतिकशास्त्र प्राध्यापक',
+      en: 'Physics lecturer',
+      np: 'भौतिकशास्त्र लेक्चरर',
     },
     name: {
       en: 'Tilak Ram Mehta',
@@ -211,8 +211,8 @@ export const InstructorSectionData = {
   {
     img: upendra,
     status: {
-      en: 'Botany & Geology Prof.',
-      np: 'वनस्पति र भूविज्ञान प्राध्यापक',
+      en: 'Botany & Geology lecturer',
+      np: 'वनस्पति र भूविज्ञान लेक्चरर',
     },
     name: {
       en: 'Upendra Chaudhary',
