@@ -5,10 +5,10 @@ import Footer from '@components/Footer';
 import {ContactForm} from '@components/Mail';
 import {RootState} from '@store/index';
 
-import mail from '@images/mail.png';
-import map from '@images/map.png';
-import mobile from '@images/smartphone.png';
-import gmail from '@images/gmail.png';
+import mail from '@images/mail.webp';
+import map from '@images/map.webp';
+import mobile from '@images/smartphone.webp';
+import gmail from '@images/gmail.webp';
 import {contactSectionData as data} from '@data/I10n/home';
 
 const ContactSection: React.FC = () => {

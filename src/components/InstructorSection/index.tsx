@@ -2,7 +2,7 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 
 import {RootState} from '@store/index';
-import instructor from '@images/instructor.png';
+import instructor from '@images/instructor.webp';
 import {InstructorSectionData as data} from '@data/I10n/home';
 
 interface CardProps {

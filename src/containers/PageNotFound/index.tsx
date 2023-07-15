@@ -5,7 +5,7 @@ import Navbar from '@components/Navbar';
 import {Button} from '@components/Buttons';
 import ContactSection from '@components/ContactSection';
 
-import HeroImage from '@images/detective.png';
+import HeroImage from '@images/detective.webp';
 
 const PageNotFound = () => {
   const navigate = useNavigate();

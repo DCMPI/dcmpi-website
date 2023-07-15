@@ -13,7 +13,7 @@ import GallerySection from '@components/GallerySection';
 
 import {heroSectionData} from '@data/I10n/home';
 import {RootState} from '@store/index';
-import HeroImage from '@images/hero-2.png';
+import HeroImage from '@images/hero-2.webp';
 
 const Home = () => {
   const {

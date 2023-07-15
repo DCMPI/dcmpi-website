@@ -2,10 +2,10 @@
 import React, {useCallback} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import facebook from '@images/facebook.png';
-import twitter from '@images/twitter.png';
-import insta from '@images/insta.png';
-import FooterLogo from '@images/dcmpi-logo.png';
+import facebook from '@images/facebook.webp';
+import twitter from '@images/twitter.webp';
+import insta from '@images/insta.webp';
+import FooterLogo from '@images/dcmpi-logo.webp';
 
 const Footer = () => {
   const handleLogoClick = useCallback(() => {
