@@ -10,7 +10,7 @@ import useLanguage from '@hooks/useLanguage';
 import {dispatchToggleEnglish, dispatchToggleNepali} from '@services/dispatch';
 import {navData as data} from '@data/I10n/home';
 
-import NavLogo from '@images/dcmpi-logo.png';
+import NavLogo from '@images/dcmpi-logo.webp';
 
 interface NavbarProps {
   featureRef?: React.RefObject<HTMLElement>;

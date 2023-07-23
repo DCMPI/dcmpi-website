@@ -2,14 +2,24 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 
 import {RootState} from '@store/index';
-import instructor from '@images/instructor.png';
+import instructor from '@images/instructor.webp';
 import {InstructorSectionData as data} from '@data/I10n/home';
 
-const InstructorCard = ({title, imgSrc, key}: {title: string, imgSrc?: string, key: number}) => (
-  <div key={key} className='w-[300px] py-4 sm:py-10 cursor-pointer transition-all duration-500 hover:scale-125'>
+interface CardProps {
+  title: string;
+  status: string;
+  imgSrc: string;
+  key: string;
+}
+
+const InstructorCard: React.FC<CardProps> = ({
+  title, status, imgSrc, key,
+}) => (
+  <div key={key} className='w-[300px] py-4 sm:py-10 cursor-pointer transition-all duration-500 hover:scale-110'>
     <div className='flex flex-col items-center gap-4'>
-      <img src={imgSrc || instructor} alt='feature' className='h-[200px] sm:h-[250px] rounded-full border-4 border-color-dark-blue' />
+      <img src={imgSrc || instructor} alt='feature' className='w-full h-[350px] border-2 border-color-dark-blue bg-color-bg rounded-md' />
       <h3 className='font-inter font-[600] text-color-dark-blue text-[20px] border-b-4 border-color-orange'>{title}</h3>
+      <p className='font-inter font-[600] text-color-dark-blue text-[20px]'>{status}</p>
     </div>
   </div>
 );
@@ -33,11 +43,13 @@ const InstructorSection = () => {
           {data?.subtitle[language as keyof typeof data.subtitle]}
         </p>
         <div className='flex justify-center gap-8 flex-wrap'>
-          {[1, 2, 3, 4, 5, 6, 7, 8].map(
+          {data?.teachers.map(
             (item) => (
               <InstructorCard
-                title={data?.name[language as keyof typeof data.name]}
-                key={item}
+                title={item.name[language as keyof typeof item.name]}
+                key={item.name.en}
+                imgSrc={item?.img}
+                status={item.status[language as keyof typeof item.status]}
               />
             ),
           )}

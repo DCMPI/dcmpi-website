@@ -101,7 +101,7 @@ const ContactForm = () => {
       />
       <button
         type='button'
-        className='h-[50px] sm:h-[58px] px-[25px] bg-color-orange hover:bg-[#FF8800] font-[600] text-[17px] text-color-white font-inter rounded-lg'
+        className='h-[50px] sm:h-[58px] px-[25px] bg-color-orange hover:bg-[#DD6434] font-[600] text-[17px] text-color-white font-inter rounded-lg'
         onClick={handleSubmit}
       >
         {data?.buttonText[language as keyof typeof data.buttonText]}

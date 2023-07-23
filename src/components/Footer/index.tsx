@@ -2,10 +2,10 @@
 import React, {useCallback} from 'react';
 import {NavLink} from 'react-router-dom';
 
-import facebook from '@images/facebook.png';
-import twitter from '@images/twitter.png';
-import insta from '@images/insta.png';
-import FooterLogo from '@images/dcmpi-logo.png';
+import facebook from '@images/facebook.webp';
+import twitter from '@images/twitter.webp';
+import insta from '@images/insta.webp';
+import FooterLogo from '@images/dcmpi-logo.webp';
 
 const Footer = () => {
   const handleLogoClick = useCallback(() => {
@@ -49,7 +49,12 @@ const Footer = () => {
         </div>
       </div>
       <p className='mt-[28px] mb-[50px] font-inter font-[400] text-color-lt-grey text-center'>
-        © DCMPI 2022. All rights reserved.
+        © DCMPI
+        {' '}
+        {new Date().getFullYear()}
+        .
+        {' '}
+        All rights reserved.
       </p>
     </footer>
   );

@@ -1,16 +1,39 @@
-import React from 'react';
+/* eslint-disable react/button-has-type */
+import React, {useCallback, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {RootState} from '@store/index';
 import {featureSectionData as data} from '@data/I10n/home';
+import Modal from './Modal';
 
-const Card = ({title, icon, key}: {title: string, icon: string, key: string}) => (
-  <div key={key} className='w-[300px] py-10'>
-    <div className='flex flex-col items-center gap-4'>
-      <img src={icon} alt='feature' className='max-h-[80px] sm:max-h-[100px]' />
-      <h3 className='font-inter font-[600] text-color-dark-blue text-[20px]'>{title}</h3>
-    </div>
-  </div>
-);
+const Card = ({
+  title, icon, key, images,
+}: {title: string, icon: string, key: string, images: string[]}) => {
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
+  const handleShowModal = useCallback(
+    () => {
+      setIsModalVisible(true);
+    },
+    [],
+  );
+
+  const handleHideModal = useCallback(() => {
+    setIsModalVisible(false);
+  }, []);
+
+  return (
+    <>
+      <div key={key} className='w-[300px] py-10'>
+        <div className='flex flex-col items-center gap-4'>
+          <img src={icon} alt='feature' className='max-h-[80px] sm:max-h-[100px]' />
+          <button onClick={handleShowModal}>
+            <h3 className='font-inter font-[600] text-color-dark-blue text-[20px]'>{title}</h3>
+          </button>
+        </div>
+      </div>
+      <Modal visible={isModalVisible} hideModal={handleHideModal} images={images} title={title} />
+    </>
+  );
+};
 
 const FeatureSection = () => {
   const {
@@ -36,6 +59,7 @@ const FeatureSection = () => {
                 title={item.title[language as keyof typeof item.title]}
                 icon={item.icon}
                 key={item.title.en}
+                images={item.images}
               />
             ),
           )}
